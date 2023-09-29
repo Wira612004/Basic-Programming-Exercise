@@ -1,5 +1,5 @@
 # random number guessing  game
-# import random library
+# Wira Harsa | TI22I
 from random import randint
 
 
@@ -52,9 +52,9 @@ if __name__ == "__main__":
     d = 10-c
     a = randint(1, 5)
     b = 5 - a
-    ans = randint(1, 30)
+    ans = randint(1, 100)
     turns = 10
-    print("the guess the number between 1 and 30 ")
+    print("the guess the number between 1 and 100 ")
 
     while turns > 0:
         guess = user_input()
