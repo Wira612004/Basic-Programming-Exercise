@@ -24,26 +24,31 @@ def user_score():
 
 # hints for the player.only if chose to take hints
 def hint():
-    if turns == 7:
+    if turns == 7 or turns == 3:
         while True:
             opt = str(input("do you want a hint[y or n]"))
             if opt.upper() == 'Y':
                 print(f"the ans lies between {ans - c} and {ans + d}")
                 break
             elif opt.upper() == 'N':
-                pass
-            else:
-                print('that is not a valid input')
-    if turns == 3:
-        while True:
-            option = str(input("do you want a hint?[y or n]"))
-            if option.upper() == 'Y':
-                print(f"the answer lies between {ans - a} and {ans + b} ")
+                # The break statement, as the name suggests, breaks the loop and moves the program control to the block of
+                # code after the loop (if any). The pass statement is used to do nothing.
                 break
-            elif option.upper() == 'N':
-                pass
             else:
                 print('that is not a valid input')
+    # both function inside the conditional has the same logic, so instead of writing the same block over again, we makes so that
+    # the conditional above also include the conditional below
+    
+#     if turns == 3:
+#         while True:
+#             option = str(input("do you want a hint?[y or n]"))
+#             if option.upper() == 'Y':
+#                 print(f"the answer lies between {ans - a} and {ans + b} ")
+#                 break
+#             elif option.upper() == 'N':
+#                 pass
+#             else:
+#                 print('that is not a valid input')
 
 if __name__ == "__main__":
     Name = user_name()
